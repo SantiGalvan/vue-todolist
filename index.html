@@ -36,7 +36,9 @@
         <div class="container">
             <h1 class="text-center my-3">Vue To Do LIst</h1>
             <ul class="list-group">
-                <li class="list-group-item" v-for="task in tasks">{{task.text}}</li>
+                <li class="list-group-item" v-for="task in tasks">
+                    <span :class="{'text-decoration-line-through': task.done === true}">{{task.text}}</span>
+                </li>
             </ul>
         </div>
     </div>
